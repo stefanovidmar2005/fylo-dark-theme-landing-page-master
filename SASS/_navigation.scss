@@ -1,0 +1,22 @@
+@import "variables";
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.5rem;
+  font-family: $open-sans-font-family;
+  .logo {
+    width: 10rem;
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    a {
+      color: $white;
+      text-decoration: none;
+      font-weight: $fw-400;
+    }
+  }
+}

@@ -1,0 +1,254 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+:root {
+  font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 2.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+.navigation .logo {
+  width: 10rem;
+}
+.navigation__list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+.navigation__list a {
+  color: hsl(0deg, 0%, 100%);
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.header {
+  background-color: hsl(217deg, 28%, 15%);
+}
+
+.main {
+  font-family: "Open Sans", sans-serif;
+  background-color: hsl(218deg, 28%, 13%);
+}
+.main .intro {
+  font-size: 24px;
+  background-color: hsl(217deg, 28%, 15%);
+  background-image: url(../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 150%;
+}
+.main .intro__container {
+  width: 85%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1em 0 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.main .intro__title {
+  font-family: "Raleway", sans-serif;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1em;
+  padding-top: 1em;
+  line-height: 1.5em;
+  margin-bottom: 1rem;
+}
+.main .intro__description {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.main .intro__button {
+  background-color: hsl(198deg, 60%, 50%);
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.6rem;
+  width: 80%;
+  padding: 1.25rem 2rem;
+  border-radius: 3rem;
+  font-weight: 700;
+}
+.main .cards {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10rem;
+  margin-top: 10rem;
+  padding: 0 2.5rem;
+}
+.main .cards .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main .cards .card__header {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 2rem;
+  margin-top: 2.4rem;
+  margin-bottom: 1rem;
+}
+.main .cards .card__description {
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: hsl(0deg, 0%, 100%);
+}
+.main .productive {
+  margin-top: 20rem;
+  padding: 0 2.5rem;
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Raleway", sans-serif;
+}
+.main .productive__img {
+  margin-bottom: 5rem;
+}
+.main .productive__header {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+.main .productive__description {
+  margin-bottom: 1rem;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.7;
+}
+.main .productive__cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  color: hsl(0deg, 0%, 100%);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid hsl(176deg, 68%, 64%);
+  color: hsl(176deg, 68%, 64%);
+}
+.main .testimonials {
+  margin-top: 15rem;
+  padding: 0 4rem;
+}
+.main .testimonials-quote {
+  width: 2.5rem;
+}
+.main .testimonials__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.main .testimonials__cards-card {
+  background-color: hsl(219deg, 30%, 18%);
+  color: hsl(0deg, 0%, 100%);
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.main .testimonials__cards-card-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.main .testimonials__cards-card-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main .testimonials__cards-card-profile-img {
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: -3px;
+}
+.main .testimonials__cards-card-profile-content {
+  font-size: 1rem;
+}
+.main .testimonials__cards-card-profile-content span {
+  font-size: 0.85rem;
+  color: #aba3a3;
+}
+
+/*# sourceMappingURL=style.css.map */

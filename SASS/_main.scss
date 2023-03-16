@@ -1,0 +1,147 @@
+@import "variables";
+
+.main {
+  font-family: $open-sans-font-family;
+  background-color: $primary-color-2;
+  .intro {
+    font-size: 24px;
+    background-color: $primary-color-1;
+    background-image: url(../images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 150%;
+    &__container {
+      width: 85%;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1em 0 1.5em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    &__title {
+      font-family: $raleway-font-family;
+      color: $white;
+      font-size: 1em;
+      padding-top: 1em;
+      line-height: 1.5em;
+      margin-bottom: 1rem;
+    }
+    &__description {
+      color: $white;
+      font-size: $body-font-size;
+      margin-bottom: 2rem;
+    }
+
+    &__button {
+      background-color: $accent-color-2;
+      text-decoration: none;
+      color: $white;
+      font-size: $default-font-size;
+      width: 80%;
+      padding: 1.25rem 2rem;
+      border-radius: 3rem;
+      font-weight: $fw-700;
+    }
+  }
+  .cards {
+    font-family: $raleway-font-family;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
+    margin-top: 10rem;
+    padding: 0 2.5rem;
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      &__header {
+        color: $white;
+        font-size: 2rem;
+        margin-top: 2.4rem;
+        margin-bottom: 1rem;
+      }
+      &__description {
+        font-family: $open-sans-font-family;
+        text-align: center;
+        color: $white;
+      }
+    }
+  }
+  .productive {
+    margin-top: 20rem;
+    padding: 0 2.5rem;
+    color: $white;
+    font-family: $raleway-font-family;
+
+    &__img {
+      margin-bottom: 5rem;
+    }
+    &__header {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+    }
+    &__description {
+      margin-bottom: 1rem;
+      font-family: $open-sans-font-family;
+      line-height: 1.7;
+    }
+    &__cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: $default-font-size;
+      font-family: $open-sans-font-family;
+      text-decoration: none;
+      color: $white;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid $accent-color-1;
+      color: $accent-color-1;
+    }
+  }
+  .testimonials {
+    margin-top: 15rem;
+    padding: 0 4rem;
+    &-quote {
+      width: 2.5rem;
+    }
+    &__cards {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      &-card {
+        background-color: $primary-color-4;
+        color: $white;
+        padding: 3rem;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        &-description {
+          font-size: 1rem;
+          line-height: 1.7;
+          margin-bottom: 1.5rem;
+        }
+        &-profile {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          &-img {
+            height: 3rem;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-top: -3px;
+          }
+          &-content {
+            font-size: 1rem;
+            span {
+              font-size: 0.85rem;
+              color: #aba3a3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
