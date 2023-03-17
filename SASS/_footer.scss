@@ -1,0 +1,58 @@
+@import "variables";
+.footer {
+  // when adding the media query for mobile will be useful
+  // &__container {
+  // }
+  background-color: $primary-color-3;
+  padding-top: 20rem;
+  padding-inline: 3.5rem;
+  color: $white;
+  &-logo {
+    margin-bottom: 5rem;
+  }
+  .special {
+    align-self: flex-start;
+    margin-top: 0.45rem;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 8rem;
+    &-description {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      &-paragraph {
+        line-height: 1.7;
+        font-size: $default-font-size;
+      }
+    }
+  }
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    ul {
+      padding: 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      a {
+        text-decoration: none;
+        color: $white;
+        font-size: $default-font-size;
+      }
+    }
+  }
+
+  .social__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 5rem;
+  }
+}
