@@ -1,12 +1,23 @@
 @import "variables";
 .footer {
-  // when adding the media query for mobile will be useful
-  // &__container {
-  // }
+  .row {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  &__container {
+    @include for-desktop() {
+      display: flex;
+      padding-bottom: 8rem;
+    }
+  }
   background-color: $primary-color-3;
   padding-top: 20rem;
   padding-inline: 3.5rem;
   color: $white;
+  @include for-desktop() {
+    padding-inline: $desktop-padding;
+  }
   &-logo {
     margin-bottom: 5rem;
   }
@@ -14,11 +25,19 @@
     align-self: flex-start;
     margin-top: 0.45rem;
   }
+  .first {
+    @include for-desktop() {
+      width: 35%;
+      align-self: flex-start;
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 8rem;
+    @include for-desktop() {
+      flex-direction: row;
+    }
     &-description {
       display: flex;
       align-items: center;
@@ -33,6 +52,9 @@
     display: flex;
     flex-direction: column;
     gap: 4rem;
+    @include for-desktop() {
+      flex-direction: row;
+    }
 
     ul {
       padding: 0;
@@ -46,13 +68,5 @@
         font-size: $default-font-size;
       }
     }
-  }
-
-  .social__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 5rem;
   }
 }

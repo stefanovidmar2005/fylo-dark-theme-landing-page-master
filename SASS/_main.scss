@@ -1,5 +1,5 @@
 @import "variables";
-
+@import "mixins";
 .main {
   font-family: $open-sans-font-family;
   background-color: $primary-color-2;
@@ -10,9 +10,14 @@
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 150%;
+    @include for-desktop() {
+      background-image: url(../images/bg-curvy-desktop.svg);
+      background-size: contain;
+      background-position: center bottom;
+    }
     &__container {
       width: 85%;
-      max-width: 500px;
+      max-width: 550px;
       margin: 0 auto;
       padding: 1em 0 1.5em;
       display: flex;
@@ -27,11 +32,19 @@
       padding-top: 1em;
       line-height: 1.5em;
       margin-bottom: 1rem;
+      @include for-desktop() {
+        font-size: 1.35em;
+        margin-bottom: 2.5rem;
+      }
     }
     &__description {
       color: $white;
       font-size: $body-font-size;
       margin-bottom: 2rem;
+      @include for-desktop() {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+      }
     }
 
     &__button {
@@ -43,6 +56,13 @@
       padding: 1.25rem 2rem;
       border-radius: 3rem;
       font-weight: $fw-700;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $accent-color-1;
+      }
+      @include for-desktop() {
+        width: 50%;
+      }
     }
   }
   .cards {
@@ -53,6 +73,16 @@
     gap: 10rem;
     margin-top: 10rem;
     padding: 0 2.5rem;
+    @include for-desktop() {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 85%;
+      max-width: 1000px;
+      margin: 0 auto;
+      margin-top: 15rem;
+      gap: 20rem;
+      row-gap: 10rem;
+    }
     .card {
       display: flex;
       justify-content: center;
@@ -76,18 +106,36 @@
     padding: 0 2.5rem;
     color: $white;
     font-family: $raleway-font-family;
-
+    @include for-desktop() {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4%;
+      padding: 0 $desktop-padding;
+    }
     &__img {
       margin-bottom: 5rem;
+      @include for-desktop() {
+        width: 55%;
+      }
+    }
+    &__content {
+      width: 42%;
     }
     &__header {
       margin-bottom: 1.5rem;
       font-size: 2rem;
+      @include for-desktop() {
+        font-size: 5rem;
+      }
     }
     &__description {
       margin-bottom: 1rem;
       font-family: $open-sans-font-family;
       line-height: 1.7;
+      @include for-desktop() {
+        font-size: 1.7rem;
+      }
     }
     &__cta-link {
       display: inline-flex;
@@ -97,22 +145,46 @@
       font-family: $open-sans-font-family;
       text-decoration: none;
       color: $white;
+      padding: 0.5rem 1rem;
       padding-bottom: 0.5rem;
       border-bottom: 2px solid $accent-color-1;
       color: $accent-color-1;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: $accent-color-1;
+        color: black;
+        transform: translateY(-3px);
+      }
+      @include for-desktop() {
+        margin-top: 2rem;
+      }
     }
   }
   .testimonials {
     margin-top: 15rem;
     padding: 0 4rem;
     padding-bottom: 35rem;
+    @include for-desktop() {
+      padding: $desktop-padding;
+      padding-bottom: 35rem;
+    }
     &-quote {
       width: 2.5rem;
+      @include for-desktop() {
+        width: 5.3rem;
+        z-index: -1;
+        margin-bottom: -10px;
+        margin-left: -8px;
+      }
     }
     &__cards {
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
+      @include for-desktop() {
+        flex-direction: row;
+        gap: 4rem;
+      }
       &-card {
         background-color: $primary-color-4;
         color: $white;
@@ -123,6 +195,11 @@
           font-size: 1rem;
           line-height: 1.7;
           margin-bottom: 1.5rem;
+          opacity: 0.8;
+          @include for-desktop() {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+          }
         }
         &-profile {
           display: flex;
@@ -133,12 +210,21 @@
             object-fit: cover;
             border-radius: 50%;
             margin-top: -3px;
+            @include for-desktop() {
+              margin-top: 0px;
+            }
           }
           &-content {
             font-size: 1rem;
+            @include for-desktop() {
+              font-size: 1.4rem;
+            }
             span {
               font-size: 0.85rem;
               color: #aba3a3;
+              @include for-desktop() {
+                font-size: 1.2rem;
+              }
             }
           }
         }
@@ -148,6 +234,10 @@
   // ABSOLUTE POSTION FOR THE EARLY ACCESS SECTION
   .abs {
     position: relative;
+    @include for-desktop() {
+      display: flex;
+      justify-content: center;
+    }
   }
   .early__access {
     padding: 3.5rem 2.5rem;
@@ -158,20 +248,40 @@
     text-align: center;
     position: absolute;
     top: -30rem;
+    @include for-desktop() {
+      top: -25rem;
+      width: 65%;
+      padding: 5rem 10rem;
+    }
+
     &-header {
       margin-bottom: 1.5rem;
+      @include for-desktop() {
+        font-size: 3.5rem;
+      }
     }
     &-description {
       margin-bottom: 2.5rem;
+      @include for-desktop() {
+        font-size: 1.6rem;
+        margin-bottom: 4rem;
+      }
     }
     &-form {
       display: flex;
       flex-direction: column;
       gap: 2rem;
+      @include for-desktop() {
+        flex-direction: row;
+        gap: 3rem;
+      }
       input {
         border-radius: 100px;
         border: 0;
         padding: 1.35rem 2.5rem;
+        @include for-desktop() {
+          width: 67%;
+        }
       }
 
       ::placeholder {
@@ -186,6 +296,10 @@
         font-size: $default-font-size;
         font-weight: $fw-700;
         color: $white;
+        cursor: pointer;
+        @include for-desktop() {
+          width: 27% !important;
+        }
       }
     }
   }
