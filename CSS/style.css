@@ -264,7 +264,10 @@ h6 {
   }
 }
 .main .productive__content {
-  width: 42%;
+  @media (min-width: 1000px){
+      width: 42%;
+  }
+
 }
 .main .productive__header {
   margin-bottom: 1.5rem;
